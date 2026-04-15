@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Anh xin lỗi bé tí ạaaa</title>
+  <title>Anh xin lỗi bé tí ạ 😢</title>
   <style>
     body {
       margin: 0;
@@ -16,19 +16,29 @@
     }
 
     .box {
-      background: white;
+      background: url("girl.jpg") center/cover no-repeat;
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 20px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
       color: #ff4d6d;
-    }
-
-    img {
-      width: 150px;
-      margin-bottom: 20px;
     }
 
     button {
@@ -55,17 +65,31 @@
 <body>
 
 <div class="box">
-  <img src="https://media.tenor.com/3h1WgYcX0kMAAAAC/cute-sorry.gif">
-  <h1>Anh xin lỗi 😢</h1>
-  <p>Tha lỗi cho anh nhaaa 🥺</p>
+  <div class="content">
+    <h1>Anh xin lỗi bé tí ạ </h1>
+    <p>Tha lỗi cho anh nhaaa </p>
 
-  <button id="yes" onclick="accept()">Oke ❤️</button>
-  <button id="no">Không 😤</button>
+    <button id="yes" onclick="accept()">Oke ❤️</button>
+    <button id="no">Không </button>
+  </div>
 </div>
 
 <script>
   function accept() {
-    document.body.innerHTML = "<h1>Cảm ơn em ❤️ Anh yêu em nhiều lắm 🥺</h1>";
+    document.body.innerHTML = `
+      <div style="
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:url('girl.jpg') center/cover no-repeat;
+        color:white;
+        font-size:30px;
+        text-shadow: 0 0 10px black;
+      ">
+        Cảm ơn em ❤️ Anh yêu cún 
+      </div>
+    `;
   }
 
   const noBtn = document.getElementById("no");
