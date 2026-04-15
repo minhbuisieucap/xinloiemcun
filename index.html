@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Anh xin lỗi bé tí ạaaa</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffe6f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #ff4d6d;
+    }
+
+    img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background: #ccc;
+      color: white;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <img src="https://media.tenor.com/3h1WgYcX0kMAAAAC/cute-sorry.gif">
+  <h1>Anh xin lỗi 😢</h1>
+  <p>Tha lỗi cho anh nhaaa 🥺</p>
+
+  <button id="yes" onclick="accept()">Oke ❤️</button>
+  <button id="no">Không 😤</button>
+</div>
+
+<script>
+  function accept() {
+    document.body.innerHTML = "<h1>Cảm ơn em ❤️ Anh yêu em nhiều lắm 🥺</h1>";
+  }
+
+  const noBtn = document.getElementById("no");
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+</script>
+
+</body>
+</html>
