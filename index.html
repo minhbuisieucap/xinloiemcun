@@ -76,22 +76,26 @@
 </div>
 
 <script>
-  function accept() {
-    document.body.innerHTML = `
-      <div style="
-        height:100vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        background:url('girl.jpg.png') center/cover no-repeat;
-        color:white;
-        font-size:30px;
-        text-shadow: 0 0 10px black;
-      ">
-        Cảm ơn em ❤️ Anh yêu em nhiều lắm 🥺
-      </div>
-    `;
-  }
+function accept() {
+  document.body.innerHTML = `
+    <div style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('girl.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 30px;
+      text-shadow: 0 0 10px black;
+    ">
+      Cảm ơn em ❤️ Anh yêu em nhiều lắm 🥺
+    </div>
+  `;
+}
 
   const noBtn = document.getElementById("no");
 
